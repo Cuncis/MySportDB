@@ -1,4 +1,4 @@
-package com.gdc.mysportdb;
+package com.gdc.mysportdb.view;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 
+import com.gdc.mysportdb.R;
 import com.gdc.mysportdb.view.favorite.Favorites;
 import com.gdc.mysportdb.view.match.Matches;
 import com.gdc.mysportdb.view.team.Teams;
