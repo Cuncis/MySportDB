@@ -1,4 +1,4 @@
-package com.gdc.mysportdb.fragment;
+package com.gdc.mysportdb.view.match;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.gdc.mysportdb.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Favorites extends Fragment {
+public class NextMatch extends Fragment {
 
 
-    public Favorites() {
+    public NextMatch() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class Favorites extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_favorites, container, false);
+        View view = inflater.inflate(R.layout.fragment_next_match, container, false);
         return view;
     }
 

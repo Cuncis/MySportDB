@@ -6,11 +6,10 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-import com.gdc.mysportdb.fragment.Favorites;
-import com.gdc.mysportdb.fragment.Matches;
-import com.gdc.mysportdb.fragment.Teams;
+import com.gdc.mysportdb.view.favorite.Favorites;
+import com.gdc.mysportdb.view.match.Matches;
+import com.gdc.mysportdb.view.team.Teams;
 
 public class Main extends AppCompatActivity {
 
