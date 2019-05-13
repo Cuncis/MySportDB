@@ -20,4 +20,13 @@
         android:id="@+id/progressbar"
         android:layout_centerInParent="true"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/tv_notif"
+        android:text="No Events At All"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>

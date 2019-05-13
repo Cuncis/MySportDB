@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.gdc.mysportdb.R;
 import com.gdc.mysportdb.adapter.TabMatchAdapter;
 import com.gdc.mysportdb.view.match.last_match.LastMatch;
+import com.gdc.mysportdb.view.match.next_match.NextMatch;
 
 /**
  * A simple {@link Fragment} subclass.

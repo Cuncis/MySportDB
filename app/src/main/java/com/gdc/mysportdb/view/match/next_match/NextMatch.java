@@ -1,4 +1,4 @@
-package com.gdc.mysportdb.view.match.last_match;
+package com.gdc.mysportdb.view.match.next_match;
 
 
 import android.os.Bundle;
@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LastMatch extends Fragment implements MatchView {
+public class NextMatch extends Fragment implements MatchView {
 
     private ProgressBar progressBar;
     private RecyclerView recyclerView;
@@ -33,9 +33,9 @@ public class LastMatch extends Fragment implements MatchView {
 
     private List<Match> matchList;
     private MatchAdapter adapter;
-    private LastMatchPresenter presenter;
+    private NextMatchPresenter presenter;
 
-    public LastMatch() {
+    public NextMatch() {
         // Required empty public constructor
     }
 
@@ -43,17 +43,16 @@ public class LastMatch extends Fragment implements MatchView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_last_match, container, false);
+        View view = inflater.inflate(R.layout.fragment_next_match, container, false);
 
         tvNotif = view.findViewById(R.id.tv_notif);
         progressBar = view.findViewById(R.id.progressbar);
-        recyclerView = view.findViewById(R.id.rv_lastMatch);
-
+        recyclerView = view.findViewById(R.id.rv_nextMatch);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         matchList = new ArrayList<>();
 
-        presenter = new LastMatchPresenter(this);
-        presenter.getLastMatch("4328");
+        presenter = new NextMatchPresenter(this);
+        presenter.getNextMatch("4328");
 
         return view;
     }
@@ -71,6 +70,7 @@ public class LastMatch extends Fragment implements MatchView {
     @Override
     public void showSuccess(MatchResponse result) {
         try {
+            tvNotif.setVisibility(View.GONE);
             matchList.addAll(result.getGetAllMatch());
             adapter = new MatchAdapter(getActivity(), matchList);
             recyclerView.setAdapter(adapter);

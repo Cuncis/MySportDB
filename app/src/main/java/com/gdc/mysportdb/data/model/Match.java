@@ -4,6 +4,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Match {
 
+    @SerializedName("idHomeTeam")
+    private String idHomeTeam;
+
+    @SerializedName("idAwayTeam")
+    private String idAwayTeam;
+
+    @SerializedName("idEvent")
+    private String idEvent;
+
     @SerializedName("dateEvent")
     private String date;
 
@@ -20,6 +29,30 @@ public class Match {
     private String awayScore;
 
     public Match() {
+    }
+
+    public String getIdEvent() {
+        return idEvent;
+    }
+
+    public String getIdHomeTeam() {
+        return idHomeTeam;
+    }
+
+    public void setIdHomeTeam(String idHomeTeam) {
+        this.idHomeTeam = idHomeTeam;
+    }
+
+    public String getIdAwayTeam() {
+        return idAwayTeam;
+    }
+
+    public void setIdAwayTeam(String idAwayTeam) {
+        this.idAwayTeam = idAwayTeam;
+    }
+
+    public void setIdEvent(String idEvent) {
+        this.idEvent = idEvent;
     }
 
     public String getDate() {
