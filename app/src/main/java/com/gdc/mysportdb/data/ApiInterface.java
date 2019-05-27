@@ -1,6 +1,7 @@
 package com.gdc.mysportdb.data;
 
 import com.gdc.mysportdb.data.model.DetailResponse;
+import com.gdc.mysportdb.data.model.LeagueResponse;
 import com.gdc.mysportdb.data.model.MatchResponse;
 import com.gdc.mysportdb.data.model.TeamResponse;
 
@@ -20,4 +21,10 @@ public interface ApiInterface {
 
     @GET("api/v1/json/1/lookupteam.php")
     Call<TeamResponse> getTeam(@Query("id") String idTeam);
+
+    @GET("api/v1/json/1/search_all_teams.php")
+    Call<TeamResponse> getTeams(@Query("l") String leagueName);
+
+    @GET("api/v1/json/1/all_leagues.php")
+    Call<LeagueResponse> getLeague();
 }

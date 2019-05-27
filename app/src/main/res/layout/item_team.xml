@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/img_teamLogo"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_margin="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Team Name"
+        android:id="@+id/tv_teamName"
+        android:textSize="22sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"/>
+
+</LinearLayout>

@@ -41,6 +41,8 @@ public class MatchDetail extends AppCompatActivity implements DetailView {
         presenter.getMatchDetail(idEvent);
         presenter.getHomeLogo(idHomeTeam);
         presenter.getAwayLogo(idAwayTeam);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void initView() {
@@ -114,10 +116,15 @@ public class MatchDetail extends AppCompatActivity implements DetailView {
         Picasso.get().load(result.getTeamList().get(0).getStrTeamBadge()).into(imgAwayLogo);
     }
 
-
     @Override
     public void showError(String errorMessage) {
         Toast.makeText(this, "Error: " + errorMessage, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return super.onSupportNavigateUp();
     }
 }
 

@@ -6,7 +6,14 @@ public class Team {
     @SerializedName("strTeamBadge")
     private String strTeamBadge;
 
+    @SerializedName("strTeam")
+    private String strTeamName;
+
     public String getStrTeamBadge() {
         return strTeamBadge;
+    }
+
+    public String getStrTeamName() {
+        return strTeamName;
     }
 }
