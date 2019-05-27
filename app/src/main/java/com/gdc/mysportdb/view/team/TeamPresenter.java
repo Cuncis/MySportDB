@@ -1,8 +1,7 @@
 package com.gdc.mysportdb.view.team;
 
-import com.gdc.mysportdb.data.ApiClient;
-import com.gdc.mysportdb.data.ApiInterface;
-import com.gdc.mysportdb.data.model.LeagueResponse;
+import com.gdc.mysportdb.data.retrofit.ApiClient;
+import com.gdc.mysportdb.data.retrofit.ApiInterface;
 import com.gdc.mysportdb.data.model.TeamResponse;
 
 import retrofit2.Call;

@@ -1,7 +1,7 @@
 package com.gdc.mysportdb.view.match.last_match;
 
-import com.gdc.mysportdb.data.ApiClient;
-import com.gdc.mysportdb.data.ApiInterface;
+import com.gdc.mysportdb.data.retrofit.ApiClient;
+import com.gdc.mysportdb.data.retrofit.ApiInterface;
 import com.gdc.mysportdb.data.model.MatchResponse;
 import com.gdc.mysportdb.view.match.MatchView;
 

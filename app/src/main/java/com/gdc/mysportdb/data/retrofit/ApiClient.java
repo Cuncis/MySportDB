@@ -1,4 +1,4 @@
-package com.gdc.mysportdb.data;
+package com.gdc.mysportdb.data.retrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

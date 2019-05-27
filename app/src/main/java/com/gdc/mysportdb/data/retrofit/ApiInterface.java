@@ -1,4 +1,4 @@
-package com.gdc.mysportdb.data;
+package com.gdc.mysportdb.data.retrofit;
 
 import com.gdc.mysportdb.data.model.DetailResponse;
 import com.gdc.mysportdb.data.model.LeagueResponse;

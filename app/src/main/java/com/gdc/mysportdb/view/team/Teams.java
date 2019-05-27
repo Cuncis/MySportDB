@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import com.gdc.mysportdb.R;
 import com.gdc.mysportdb.adapter.TeamsAdapter;
-import com.gdc.mysportdb.data.ApiClient;
-import com.gdc.mysportdb.data.ApiInterface;
+import com.gdc.mysportdb.data.retrofit.ApiClient;
+import com.gdc.mysportdb.data.retrofit.ApiInterface;
 import com.gdc.mysportdb.data.model.LeagueResponse;
 import com.gdc.mysportdb.data.model.Leagues;
 import com.gdc.mysportdb.data.model.Team;
