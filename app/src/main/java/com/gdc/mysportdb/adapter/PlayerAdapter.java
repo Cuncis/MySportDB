@@ -1,8 +1,10 @@
 package com.gdc.mysportdb.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.gdc.mysportdb.R;
 import com.gdc.mysportdb.data.model.Player;
+import com.gdc.mysportdb.view.team.detail.player_detail.PlayerDetail;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -34,10 +37,18 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerHold
 
     @Override
     public void onBindViewHolder(@NonNull PlayerHolder holder, int position) {
-        Player player = playerList.get(position);
+        final Player player = playerList.get(position);
         holder.tvPlayerName.setText(player.getStrPlayer());
         holder.tvPlayerPosition.setText(player.getStrPosition());
         Picasso.get().load(player.getPlayerLogo()).into(holder.imgPlayerPoster);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, PlayerDetail.class);
+                i.putExtra("KEY_PLAYER", player);
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
