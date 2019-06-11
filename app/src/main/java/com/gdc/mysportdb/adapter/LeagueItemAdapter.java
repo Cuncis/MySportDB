@@ -6,17 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.gdc.mysportdb.data.model.Leagues;
+import com.gdc.mysportdb.data.model.League;
 
 import java.util.List;
 
 public class LeagueItemAdapter extends BaseAdapter {
 
     Context context;
-    List<Leagues> leagues;
+    List<League> leagues;
     RecyclerView.ViewHolder holder = null;
 
-    public LeagueItemAdapter(Context context, List<Leagues> leagues) {
+    public LeagueItemAdapter(Context context, List<League> leagues) {
         this.context = context;
         this.leagues = leagues;
     }

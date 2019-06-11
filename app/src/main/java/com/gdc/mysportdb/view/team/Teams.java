@@ -21,7 +21,7 @@ import com.gdc.mysportdb.adapter.TeamsAdapter;
 import com.gdc.mysportdb.data.retrofit.ApiClient;
 import com.gdc.mysportdb.data.retrofit.ApiInterface;
 import com.gdc.mysportdb.data.model.LeagueResponse;
-import com.gdc.mysportdb.data.model.Leagues;
+import com.gdc.mysportdb.data.model.League;
 import com.gdc.mysportdb.data.model.Team;
 import com.gdc.mysportdb.data.model.TeamResponse;
 
@@ -47,7 +47,7 @@ public class Teams extends Fragment implements TeamView{
     TeamPresenter presenter;
 
     String[] leagueName;
-//    List<Leagues> leaguesList;
+//    List<League> leaguesList;
 
     public Teams() {
         // Required empty public constructor
@@ -113,7 +113,7 @@ public class Teams extends Fragment implements TeamView{
         call.enqueue(new Callback<LeagueResponse>() {
             @Override
             public void onResponse(Call<LeagueResponse> call, Response<LeagueResponse> response) {
-                List<Leagues> league = response.body().getLeagues();
+                List<League> league = response.body().getLeagues();
 
                 leagueName = new String[league.size()];
 

@@ -7,13 +7,13 @@ import com.google.gson.annotations.SerializedName;
 public class LeagueResponse{
 
 	@SerializedName("leagues")
-	private List<Leagues> leagues;
+	private List<League> leagues;
 
-	public void setLeagues(List<Leagues> leagues){
+	public void setLeagues(List<League> leagues){
 		this.leagues = leagues;
 	}
 
-	public List<Leagues> getLeagues(){
+	public List<League> getLeagues(){
 		return leagues;
 	}
 }

@@ -3,6 +3,7 @@ package com.gdc.mysportdb.data.retrofit;
 import com.gdc.mysportdb.data.model.DetailResponse;
 import com.gdc.mysportdb.data.model.LeagueResponse;
 import com.gdc.mysportdb.data.model.MatchResponse;
+import com.gdc.mysportdb.data.model.PlayerResponse;
 import com.gdc.mysportdb.data.model.TeamResponse;
 
 import retrofit2.Call;
@@ -27,4 +28,22 @@ public interface ApiInterface {
 
     @GET("api/v1/json/1/all_leagues.php")
     Call<LeagueResponse> getLeague();
+
+    @GET("api/v1/json/1/lookup_all_players.php")
+    Call<PlayerResponse> getPlayer(@Query("id") String idTeam);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 package com.gdc.mysportdb.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.gdc.mysportdb.R;
 import com.gdc.mysportdb.data.model.Team;
+import com.gdc.mysportdb.view.team.detail.TeamDetail;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -52,6 +54,15 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamsHolder>
             super(itemView);
             imgLogo = itemView.findViewById(R.id.img_teamLogo);
             tvName = itemView.findViewById(R.id.tv_teamName);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Team team = teamList.get(getAdapterPosition());
+                    Intent i = new Intent(context, TeamDetail.class);
+                    i.putExtra("KEY_TEAM", team);
+                    context.startActivity(i);
+                }
+            });
         }
     }
 

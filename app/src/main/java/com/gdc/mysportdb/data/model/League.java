@@ -4,7 +4,7 @@ package com.gdc.mysportdb.data.model;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Leagues {
+public class League {
 
 	@SerializedName("strLeagueAlternate")
 	private String strLeagueAlternate;

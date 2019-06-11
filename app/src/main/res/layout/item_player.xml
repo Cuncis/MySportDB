@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:id="@+id/img_playerPoster"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_playerName"
+        android:text="Player Name"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Position"
+        android:id="@+id/tv_playerPosition"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"/>
+
+</LinearLayout>
